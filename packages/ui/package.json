@@ -8,7 +8,14 @@
     "./card": "./src/card.tsx",
     "./code": "./src/code.tsx",
     "./menu": "./src/menu.tsx",
-    "./navbar": "./src/navbar.tsx"
+    "./navbar": "./src/navbar.tsx",
+    "./userCard": "./src/userCard.tsx",
+    "./countChart": "./src/countChart.tsx",
+    "./attendanceChart": "./src/attendanceChart.tsx",
+    "./fianaceChart": "./src/financeChart.tsx"
+
+
+
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
@@ -16,9 +23,9 @@
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
+    "@repo/config": "*",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
-    "@repo/config": "*",
     "@turbo/gen": "^1.12.4",
     "@types/node": "^20.11.24",
     "@types/react": "18.3.0",
@@ -27,6 +34,7 @@
   },
   "dependencies": {
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "recharts": "^2.15.0"
   }
 }
