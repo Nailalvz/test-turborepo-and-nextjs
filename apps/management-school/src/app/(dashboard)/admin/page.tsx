@@ -1,6 +1,6 @@
 import AttendanceChart from "@repo/ui/attendanceChart";
 import CountChart from "@repo/ui/countChart";
-import FinanceChart from "@repo/ui/fianaceChart";
+import FinanceChart from "@repo/ui/financeChart";
 import UserCard from "@repo/ui/userCard";
 
 const AdminPage = () => {
