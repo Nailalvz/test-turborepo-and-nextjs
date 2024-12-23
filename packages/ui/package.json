@@ -9,7 +9,16 @@
   ],
   "exports": {
     "./styles.css": "./dist/index.css",
-    "./card": "./src/card.tsx"
+    "./card": "./src/card.tsx",
+    "./attendanceChart": "./src/attendanceChart.tsx",
+    "./button": "./src/button.tsx",
+    "./code": "./src/code.tsx",
+    "./countChart": "./src/countChart.tsx",
+    "./financeChart": "./src/financeChart.tsx",
+    "./menu": "./src/menu.tsx",
+    "./navbar": "./src/navbar.tsx",
+    "./userCard": "./src/userCard.tsx"
+
   },
   "license": "MIT",
   "scripts": {
