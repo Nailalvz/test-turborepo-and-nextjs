@@ -1,6 +1,7 @@
 {
   "name": "@repo/ui",
   "version": "0.0.0",
+  "type": "module",
   "sideEffects": [
     "**/*.css"
   ],
@@ -18,7 +19,6 @@
     "./menu": "./src/menu.tsx",
     "./navbar": "./src/navbar.tsx",
     "./userCard": "./src/userCard.tsx"
-
   },
   "license": "MIT",
   "scripts": {
@@ -39,5 +39,8 @@
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
     "typescript": "5.5.4"
+  },
+  "dependencies": {
+    "recharts": "^2.15.0"
   }
 }
