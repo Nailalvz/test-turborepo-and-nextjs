@@ -21,7 +21,13 @@
     "./userCard": "./src/userCard.tsx",
     "./eventCalendar": "./src/eventCalendar.tsx",
     "./announcements": "./src/announcements.tsx",
-    "./bigCalendar": "./src/bigCalendar.tsx"
+    "./bigCalendar": "./src/bigCalendar.tsx",
+    "./tableSearch": "./src/tableSearch.tsx",
+    "./pagination": "./src/pagination.tsx",
+    "./table": "./src/table.tsx"
+
+
+
 
   },
   "license": "MIT",
