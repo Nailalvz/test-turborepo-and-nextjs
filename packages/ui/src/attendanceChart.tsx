@@ -41,9 +41,9 @@ const data = [
 
 const AttendanceChart = () => {
   return (
-    <div className="bg-white rounded-lg p-4 h-full">
-      <div className="flex justify-between items-center">
-        <span className="text-lg font-semibold">Atendance</span>
+    <div className="ui-bg-white ui-rounded-lg ui-p-4 ui-h-full">
+      <div className="ui-flex ui-justify-between ui-items-center">
+        <span className="ui-text-lg ui-font-semibold">Atendance</span>
         <img src="/moreDark.png" alt="" width={20} height={20} />
       </div>
       <ResponsiveContainer width="100%" height="90%">

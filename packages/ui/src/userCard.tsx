@@ -1,15 +1,15 @@
 const UserCard = ({ type }: { type: string }) => {
   return (
-    <div className="rounded-2xl odd:bg-[#CFCEFF] even:bg-[#FAE27C] p-4 flex-1 min-w-[130px]">
-      <div className="flex items-center justify-between">
-        <span className="text-[10px] bg-white px-2 py-1 rounded-full text-green-600">
+    <div className="ui-rounded-2xl odd:ui-bg-[#CFCEFF] even:ui-bg-[#FAE27C] ui-p-4 ui-flex-1 ui-min-w-[130px]">
+      <div className="ui-flex ui-items-center ui-justify-between">
+        <span className="ui-text-[10px] ui-bg-white ui-px-2 ui-py-1 ui-rounded-full ui-text-green-600">
           2024/25
         </span>
         <img src="/more.png" alt="" width={20} height={20} />
       </div>
-      <div className="flex flex-col">
-        <span className="text-2xl font-semibold mt-4 mb-1">1.234</span>
-        <span className="capitalize text-sm font-medium text-gray-500">
+      <div className="ui-flex ui-flex-col">
+        <span className="ui-text-2xl ui-font-semibold ui-mt-4 ui-mb-1">1.234</span>
+        <span className="ui-capitalize ui-text-sm ui-font-medium ui-text-gray-500">
           {type}
         </span>
       </div>
