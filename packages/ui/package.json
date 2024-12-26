@@ -18,7 +18,10 @@
     "./financeChart": "./src/financeChart.tsx",
     "./menu": "./src/menu.tsx",
     "./navbar": "./src/navbar.tsx",
-    "./userCard": "./src/userCard.tsx"
+    "./userCard": "./src/userCard.tsx",
+    "./eventCalendar": "./src/eventCalendar.tsx",
+    "./announcements": "./src/announcements.tsx"
+
   },
   "license": "MIT",
   "scripts": {
@@ -41,6 +44,7 @@
     "typescript": "5.5.4"
   },
   "dependencies": {
+    "react-calendar": "^5.1.0",
     "recharts": "^2.15.0"
   }
 }

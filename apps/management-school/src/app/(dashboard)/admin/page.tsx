@@ -2,6 +2,9 @@ import AttendanceChart from "@repo/ui/attendanceChart";
 import CountChart from "@repo/ui/countChart";
 import FinanceChart from "@repo/ui/financeChart";
 import UserCard from "@repo/ui/userCard";
+import EventCalendar from "@repo/ui/eventCalendar";
+import Announcements from "@repo/ui/announcements";
+
 
 const AdminPage = () => {
   return (
@@ -34,7 +37,10 @@ const AdminPage = () => {
       </div>
 
       {/* RIGHT */}
-      <div className="w-full lg:w-1/3">R</div>
+      <div className="w-full lg:w-1/3 flex flex-col gap-8">
+        <EventCalendar />
+        <Announcements />
+      </div>
     </div>
   );
 };
