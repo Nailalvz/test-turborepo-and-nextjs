@@ -39,7 +39,7 @@ const columns = [
   },
 ];
 
-const StudentListPage = () => {
+const ParentsListPage = () => {
   const renderRow = (item: Parent) => (
     <tr
       key={item.id}
@@ -107,4 +107,4 @@ const StudentListPage = () => {
   );
 };
 
-export default StudentListPage;
+export default ParentsListPage;
