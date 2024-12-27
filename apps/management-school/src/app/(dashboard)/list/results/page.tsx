@@ -37,7 +37,7 @@ const columns = [
   },
   {
     header: "date",
-    accessor: "dueDate",
+    accessor: "date",
     className: "hidden lg:table-cell",
   },
   {
