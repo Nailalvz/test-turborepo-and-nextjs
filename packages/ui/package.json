@@ -24,10 +24,8 @@
     "./bigCalendar": "./src/bigCalendar.tsx",
     "./tableSearch": "./src/tableSearch.tsx",
     "./pagination": "./src/pagination.tsx",
-    "./table": "./src/table.tsx"
-
-
-
+    "./table": "./src/table.tsx",
+    "./performance": "./src/performance.tsx"
 
   },
   "license": "MIT",
