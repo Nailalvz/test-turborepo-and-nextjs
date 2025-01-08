@@ -25,7 +25,9 @@
     "./tableSearch": "./src/tableSearch.tsx",
     "./pagination": "./src/pagination.tsx",
     "./table": "./src/table.tsx",
-    "./performance": "./src/performance.tsx"
+    "./performance": "./src/performance.tsx",
+    "./formModal": "./src/formModal.tsx"
+
 
   },
   "license": "MIT",
