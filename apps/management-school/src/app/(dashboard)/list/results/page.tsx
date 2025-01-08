@@ -3,6 +3,7 @@ import Pagination from "@repo/ui/pagination";
 import Table from "@repo/ui/table";
 import Link from "next/link";
 import { resultsData, role } from "@/app/lib/data";
+import FormModal from "@repo/ui/formModal";
 
 type Result = {
   id: number;
@@ -75,15 +76,11 @@ const ResultsListPage = () => {
       <td className="hidden md:table-cell">{item.score}</td>
       <td className="">
         <div className="flex items-center gap-2">
-          <Link href={`/list/teachers/${item.id}`}>
-            <button className="w-7 h-7 flex items-center justify-center rounded-full bg-lamaSky">
-              <img src="/edit.png" alt="" width={16} height={16} />
-            </button>
-          </Link>
           {role === "admin" && (
-            <button className="w-7 h-7 flex items-center justify-center rounded-full bg-lamaPurple">
-              <img src="/delete.png" alt="" width={16} height={16} />
-            </button>
+            <>
+              <FormModal table="result" type="update" data={item} />
+              <FormModal table="result" type="delete" id={item.id} />
+            </>
           )}
         </div>
       </td>
@@ -104,11 +101,7 @@ const ResultsListPage = () => {
             <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
               <img src="/sort.png" alt="" width={14} height={14} />
             </button>
-            {role === "admin" && (
-              <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
-                <img src="/plus.png" alt="" width={14} height={14} />
-              </button>
-            )}
+            {role === "admin" && <FormModal table="result" type="create" />}
           </div>
         </div>
       </div>

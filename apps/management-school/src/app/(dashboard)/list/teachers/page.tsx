@@ -1,6 +1,7 @@
 import TableSearch from "@repo/ui/tableSearch";
 import Pagination from "@repo/ui/pagination";
 import Table from "@repo/ui/table";
+import FormModal from "@repo/ui/formModal";
 import Link from "next/link";
 import { role, teachersData } from "@/app/lib/data";
 
@@ -84,9 +85,10 @@ const TeacherListPage = () => {
             </button>
           </Link>
           {role === "admin" && (
-            <button className="w-7 h-7 flex items-center justify-center rounded-full bg-lamaPurple">
-              <img src="/delete.png" alt="" width={16} height={16} />
-            </button>
+            // <button className="w-7 h-7 flex items-center justify-center rounded-full bg-lamaPurple">
+            //   <img src="/delete.png" alt="" width={16} height={16} />
+            // </button>
+            <FormModal table="teacher" type="delete" id={item.id}/>
           )}
         </div>
       </td>
@@ -108,9 +110,10 @@ const TeacherListPage = () => {
               <img src="/sort.png" alt="" width={14} height={14} />
             </button>
             {role === "admin" && (
-              <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
-                <img src="/plus.png" alt="" width={14} height={14} />
-              </button>
+              // <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
+              //   <img src="/plus.png" alt="" width={14} height={14} />
+              // </button>
+              <FormModal table="teacher" type="create" />
             )}
           </div>
         </div>
