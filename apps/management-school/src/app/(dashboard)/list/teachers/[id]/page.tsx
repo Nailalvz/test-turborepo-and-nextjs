@@ -3,6 +3,7 @@ import Announcements from "@repo/ui/announcements";
 import Performance from "@repo/ui/performance";
 import BigCalendar from "@repo/ui/bigCalendar";
 import Link from "next/link";
+import FormModal from "@repo/ui/formModal";
 
 const SingleTeacherPage = () => {
   return (
@@ -23,7 +24,28 @@ const SingleTeacherPage = () => {
               ></img>
             </div>
             <div className="w-2/3 flex flex-col justify-between gap-4">
-              <h1 className="text-xl font-semibold">Leonard Simon</h1>
+              <div className="flex items-center gap-4">
+                <h1 className="text-xl font-semibold">Leonard Simon</h1>
+                <FormModal
+                  table="teacher"
+                  type="update"
+                  data={{
+                    id: 1,
+                    username: "deanguerrero",
+                    email: "deanguerrero@google.com",
+                    password: "password",
+                    firstName: "Dean",
+                    lastName: "guerrero",
+                    phone: "+1 002 0025",
+                    address: "1234 Main St, Anytown, USA",
+                    bloodType: "A+",
+                    birthday: "2000-01-01",
+                    sex: "male",
+                    img: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1200",
+                  }}
+                ></FormModal>
+              </div>
+
               <p className="text-sm text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Commodi, a!
@@ -120,11 +142,21 @@ const SingleTeacherPage = () => {
         <div className="bg-white p-4 rounded-md">
           <h4 className="text-xl font-semibold">Shortcuts</h4>
           <div className="mt-4 flex gap-4 flex-wrap text-xs text-gray-500">
-            <Link href="/" className="p-3 rounded-md bg-lamaSkyLight">Teacher's Classes</Link>
-            <Link href="/" className="p-3 rounded-md bg-lamaPurpleLight">Teacher's Students</Link>
-            <Link href="/" className="p-3 rounded-md bg-lamaYellowLight">Teacher's Lessons</Link>
-            <Link href="/" className="p-3 rounded-md bg-pink-50">Teacher's Exams</Link>
-            <Link href="/" className="p-3 rounded-md bg-lamaSkyLight">Teacher's Assignments</Link>
+            <Link href="/" className="p-3 rounded-md bg-lamaSkyLight">
+              Teacher's Classes
+            </Link>
+            <Link href="/" className="p-3 rounded-md bg-lamaPurpleLight">
+              Teacher's Students
+            </Link>
+            <Link href="/" className="p-3 rounded-md bg-lamaYellowLight">
+              Teacher's Lessons
+            </Link>
+            <Link href="/" className="p-3 rounded-md bg-pink-50">
+              Teacher's Exams
+            </Link>
+            <Link href="/" className="p-3 rounded-md bg-lamaSkyLight">
+              Teacher's Assignments
+            </Link>
           </div>
         </div>
         <Performance />
