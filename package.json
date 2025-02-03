@@ -1,6 +1,6 @@
 {
   "private": true,
-  "scripts": {            
+  "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
@@ -11,6 +11,8 @@
   "devDependencies": {
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.11",
+    "prisma": "^6.2.1",
+    "ts-node": "^10.9.2",
     "turbo": "^2.3.3"
   },
   "engines": {
@@ -21,5 +23,11 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@prisma/client": "^6.2.1"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  }
 }

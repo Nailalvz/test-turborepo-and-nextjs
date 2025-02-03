@@ -10,12 +10,29 @@ const TeacherForm = dynamic(() => import("./forms/teacherForm"), {
 const StudentForm = dynamic(() => import("./forms/studentForm"), {
   loading: () => <h1>Loading...</h1>,
 });
+const ParentForm = dynamic(() => import("./forms/parentForm"), {
+  loading: () => <h1>Loading...</h1>,
+});
+const AnnouncementForm = dynamic(() => import("./forms/announcementForm"), {
+  loading: () => <h1>Loading...</h1>,
+});
+const SubjectForm = dynamic(() => import("./forms/subjectForm"), {
+  loading: () => <h1>Loading...</h1>,
+});
+const ClassForm = dynamic(() => import("./forms/classForm"), {
+  loading: () => <h1>Loading...</h1>,
+});
 
 const forms: {
-  [key: string]: (type: "create" | "update", data?: any) => JSX.Element;
+  [key: string]: (type: "create" | "update", data?: any, relatedData?: any) => JSX.Element;
 } = {
   teacher: (type, data) => <TeacherForm type={type} data={data} />,
   student: (type, data) => <StudentForm type={type} data={data} />,
+  parent: (type, data) => <ParentForm type={type} data={data} />,
+  announcement: (type, data) => <AnnouncementForm type={type} data={data} />,
+  subject: (type, data, relatedData) => <SubjectForm type={type} data={data} relatedData={relatedData} />,
+  class: (type, data, relatedData) => <ClassForm type={type} data={data} relatedData={relatedData} />
+
 };
 
 const FormModal = ({
@@ -23,6 +40,7 @@ const FormModal = ({
   type,
   data,
   id,
+  relatedData
 }: {
   table:
     | "teacher"
@@ -40,6 +58,7 @@ const FormModal = ({
   type: "create" | "update" | "delete";
   data?: any;
   id?: number;
+  relatedData?: any;
 }) => {
   const size = type === "create" ? "w-8 h-8" : "w-7 h-7";
   const bgColor =
@@ -62,7 +81,7 @@ const FormModal = ({
         </button>
       </form>
     ) : type === "create" || type === "update" ? (
-      forms[table](type, data)
+      forms[table](type, data, relatedData)
     ) : (
       "Form not found"
     );

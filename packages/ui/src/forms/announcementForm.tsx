@@ -7,11 +7,11 @@ import InputField from "../inputField";
 
 const schema = z.object({
   title: z.string().min(1, { message: "Title is required" }),
-  class: z.string().min(1, { message: "Last name is required" }),
-  date: z.date({ message: "Birthday is required" }),
+  class: z.string().min(1, { message: "Class is required" }),
+  date: z.date({ message: "Date is required" }),
 
 });
-// * Minuto 3:53:37
+
 type Inputs = z.infer<typeof schema>;
 
 const AnnouncementForm = ({
@@ -35,70 +35,35 @@ const AnnouncementForm = ({
 
   return (
     <form className="ui-flex ui-flex-col ui-gap-8" onSubmit={onSubmit}>
-      <h1 className="ui-text-xl ui-font-semibold">Create a new Student</h1>
+      <h1 className="ui-text-xl ui-font-semibold">Create a new announcement</h1>
       <span className="ui-text-xs ui-text-gray-500 ui-font-medium">
-        Authentication Information
+        Information
       </span>
       <div className="ui-flex ui-justify-between ui-flex-wrap ui-gap-4">
         <InputField
-          label="Username"
-          name="username"
-          defaultValue={data?.username}
+          label="Title"
+          name="title"
+          defaultValue={data?.title}
           register={register}
-          error={errors.username}
+          error={errors.title}
         />
         <InputField
-          label="Email"
-          name="email"
-          type="email"
-          defaultValue={data?.email}
+          label="Class"
+          name="class"
+          type="class"
+          defaultValue={data?.class}
           register={register}
-          error={errors.email}
+          error={errors.class}
         />
         <InputField
-          label="Password"
-          name="password"
-          type="password"
-          defaultValue={data?.password}
+          label="Date"
+          name="date"
+          type="date"
+          defaultValue={data?.date}
           register={register}
-          error={errors.password}
+          error={errors.date}
         />
       </div>
-
-      <span className="ui-text-xs ui-text-gray-500 ui-font-medium">
-        Personal Information
-      </span>
-      <div className="ui-flex ui-justify-between ui-flex-wrap ui-gap-4">
-        <InputField
-          label="First Name"
-          name="firstName"
-          defaultValue={data?.firstName}
-          register={register}
-          error={errors.firstName}
-        />
-        <InputField
-          label="Last Name"
-          name="lastName"
-          defaultValue={data?.lastName}
-          register={register}
-          error={errors.lastName}
-        />
-        <InputField
-          label="Phone"
-          name="phone"
-          defaultValue={data?.phone}
-          register={register}
-          error={errors.phone}
-        />
-        <InputField
-          label="Address"
-          name="address"
-          defaultValue={data?.address}
-          register={register}
-          error={errors.address}
-        />
-      </div>
-
       <button className="ui-bg-blue-400 ui-text-white ui-p-2 ui-rounded-md">
         {type === "create" ? "Create" : "Update"}
       </button>

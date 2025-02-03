@@ -2,7 +2,7 @@ import TableSearch from "@repo/ui/tableSearch";
 import Pagination from "@repo/ui/pagination";
 import Table from "@repo/ui/table";
 import Link from "next/link";
-import { role, subjectsData } from "@/app/lib/data";
+import { role, subjectsData, teachersData } from "@/app/lib/data";
 import FormModal from "@repo/ui/formModal";
 
 type Subject = {
@@ -66,7 +66,7 @@ const SubjectListPage = () => {
             <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
               <img src="/sort.png" alt="" width={14} height={14} />
             </button>
-            {role === "admin" && <FormModal table="subject" type="create" />}
+            {role === "admin" && <FormModal table="subject" type="create" relatedData={teachersData} />}
           </div>
         </div>
       </div>

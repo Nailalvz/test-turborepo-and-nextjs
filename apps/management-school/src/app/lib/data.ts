@@ -915,7 +915,6 @@ export const announcementsData = [
   },
 ];
 
-
 // YOU SHOULD CHANGE THE DATES OF THE EVENTS TO THE CURRENT DATE TO SEE THE EVENTS ON THE CALENDAR
 export const calendarEvents = [
   {
@@ -1059,5 +1058,36 @@ export const calendarEvents = [
     allDay: false,
     start: new Date(2024, 11, 9, 14, 0),
     end: new Date(2024, 11, 9, 14, 45),
+  },
+];
+
+export const gradeData = [
+  {
+    id: 1,
+    level: "1",
+  },
+  {
+    id: 2,
+    level: "2",
+  },
+  {
+    id: 3,
+    level: "3",
+  },
+  {
+    id: 4,
+    level: "4",
+  },
+  {
+    id: 5,
+    level: "5",
+  },
+  {
+    id: 6,
+    level: "6",
+  },
+  {
+    id: 7,
+    level: "7",
   },
 ];

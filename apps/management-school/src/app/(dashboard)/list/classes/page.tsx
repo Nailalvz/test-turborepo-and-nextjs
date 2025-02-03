@@ -2,7 +2,7 @@ import TableSearch from "@repo/ui/tableSearch";
 import Pagination from "@repo/ui/pagination";
 import Table from "@repo/ui/table";
 import Link from "next/link";
-import { classesData, role } from "@/app/lib/data";
+import { classesData, gradeData, role, teachersData } from "@/app/lib/data";
 import FormModal from "@repo/ui/formModal";
 
 type Class = {
@@ -65,6 +65,7 @@ const ClassListPage = () => {
       </td>
     </tr>
   );
+  const relatedData = {teachers: teachersData, grades: gradeData};
 
   return (
     <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0">
@@ -80,7 +81,7 @@ const ClassListPage = () => {
             <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
               <img src="/sort.png" alt="" width={14} height={14} />
             </button>
-            {role === "admin" && <FormModal table="class" type="create" />}
+            {role === "admin" && <FormModal table="class" type="create" relatedData={relatedData} />}
           </div>
         </div>
       </div>
